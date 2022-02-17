@@ -4,12 +4,12 @@
 // that changes the value beyond the scope of the function.   Also illustrate that
 // array elements function like pointers.
 
+// Function prototypes not necessary but good style
 void f1(int i, int a[]);
-void f2(int *i, int a[]); // Function prototype not necessary but good style
+void f2(int *i, int a[]); 
 
 int main() {
 
-	// We pass n1 and arr to the function
 	int n1 = 0;
 	int arr1[3] = {1,2,3};
 
