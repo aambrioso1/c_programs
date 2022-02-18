@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 // From Week6_Lecture1 (Video 53:54) 
-// Modify the find_largest program so that the find largest functon 
-// returns the point pointing to the largest element.
+// Modify the find_largest program so that the find largest function 
+// returns the pointer pointing to the largest element.
 
 
 int *find_largest(int a[], int n) {
