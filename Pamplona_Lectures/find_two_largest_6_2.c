@@ -8,8 +8,9 @@
 
 
 int *find_two_largest(int a[], int n, int *largest, int *second_largest) {
-	// Returns the address of the largest element in a[].
+	// Returns the address of the largest and second largest element in a[].
 	if(a[0]>a[1]) {
+		// Initialization depends on the ordering of the first two elements.
 		*largest = a[0];
 		*second_largest = a[1];
 	} 
@@ -19,10 +20,13 @@ int *find_two_largest(int a[], int n, int *largest, int *second_largest) {
 	}
 
 	for (int i=2; i < n; i++) {
+		// Need to modify largest AND second largest if the 
+		// next element is the largest.
 		if (a[i] > *largest) {
 			*second_largest = *largest;
 			*largest = a[i];
 		}
+		// Check if next element is second largest.
 		else if (a[i] > *second_largest) {
 			*second_largest = a[i];
 		}
@@ -41,7 +45,7 @@ int main() {
 		scanf("%d", &array[i]);
 	}
 	 
-	// Pointer p is assigned the address of largest element in a[].
+	// Note that addresses are used for the function call.
 	int first, second;
 	find_two_largest(array, n, &first, &second);  
 
