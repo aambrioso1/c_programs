@@ -26,7 +26,7 @@ int main() {
 		scanf("%d", &array[i]);
 	}
 	 
-	// Pointer p is assign address of largest element in a[]
+	// Pointer p is assigned the address of largest element in a[]
 	int *p = find_largest(array,n);  
 
 	printf("The largest element is %d\nLocated at address: %p\n", *p, p);
