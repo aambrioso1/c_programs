@@ -23,7 +23,7 @@ int main() {
 	int n2 = 0;
 	int arr2[3] = {1,2,3};
 
-	printf("We pass arr2 and a pointer to n2 to the function.\n");
+	printf("\nWe pass arr2 and a pointer to n2 to the function.\n");
 	printf("Before the function call: n2 = %d, arr2 = [%d, %d, %d]\n", n2, arr2[0], arr2[1], arr2[2]);
 	
 	f2(&n2, arr2);
