@@ -6,7 +6,7 @@
 
 
 int *find_largest(int a[], int n) {
-	// Returns the address of the largest element in a[]
+	// Returns the address of the largest element in a[].
 	int *largest = &a[0];
 	for(int i=1; i<n; i++) {
 		if(a[i] > *largest) {
@@ -26,7 +26,7 @@ int main() {
 		scanf("%d", &array[i]);
 	}
 	 
-	// Pointer p is assigned the address of largest element in a[]
+	// Pointer p is assigned the address of largest element in a[].
 	int *p = find_largest(array,n);  
 
 	printf("The largest element is %d\nLocated at address: %p\n", *p, p);
