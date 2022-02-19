@@ -3,7 +3,7 @@
 // From Week6_Lecture1 (Video 53:54) 
 // Write a function find_two_largest.   When passed an array of 
 // length n, the function will search the array for its first and second
-// largest elements and store them in variable pointing to by largest and
+// largest elements and store them in a variable pointing to by largest and
 // second largest. 
 
 int *find_largest(int a[], int n) {

@@ -49,7 +49,7 @@ int main() {
 	int first, second;
 	find_two_largest(array, n, &first, &second);  
 
-	printf("The first and second largest elements are %d %d.\n", first, second);
+	printf("The first and second largest elements are %d and %d.\n", first, second);
 
 }
 
