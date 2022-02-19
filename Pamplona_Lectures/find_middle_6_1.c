@@ -31,10 +31,9 @@ int main() {
 
 	// We compare addresses for instructional purposes.
 	// Note that the %p format code for the address.
-	int mid = size/2;
-
+	int mid = size/2; // Use to shorten the index values in the following code
 	printf("\nThe address of the middle value is %p", p);
-	printf("\nThe address of the three elements around the middle are: ");
+	printf("\nThe addresses of the three elements around the middle are: ");
 	printf("\n&a[%d] = %p, &a[%d] = %p, &a[%d] = %p.", mid-1, &a[mid-1],
 		mid, &a[mid], mid+1, &a[mid+1]);
 }
