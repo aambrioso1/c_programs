@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 // From Week6_Lecture2 (Video 1:00) 
-// Write find-two_largest.  When passed an array of length n, the  
+// Write find_two_largest.  When passed an array of length n, the  
 // function will search the array for its largest and second 
 // largest elements, storing them in the variables pointed by
-// largest and second largest, respectively.
+// largest and second_largest, respectively.
 
 
 int *find_two_largest(int a[], int n, int *largest, int *second_largest) {
-	// Returns the address of the largest and second largest element in a[].
+	// Returns the address of the largest and second largest elements in a[].
 	if(a[0]>a[1]) {
 		// Initialization depends on the ordering of the first two elements.
 		*largest = a[0];
@@ -49,7 +49,7 @@ int main() {
 	int first, second;
 	find_two_largest(array, n, &first, &second);  
 
-	printf("The first and second largest are %d %d.\n", first, second);
+	printf("The first and second largest elements are %d %d.\n", first, second);
 
 }
 
