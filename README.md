@@ -12,9 +12,11 @@ Programs for COP 3514 Lectures are in their own folder.
 
 ##### Week 6: First Lecture (Complete)
 * max_pointers_6.1.c
-* find_largest_return_pointer_6_1.c
+* find_largest_return_pointer_6_1.c (video: 53:54)
 * find_middle_6_1.c
 
 ##### Week 6: Second Lecture
-* find_two_largest_6_2.c
+* find_two_largest_6_2.c (video: 1:00)
+* ternary.c (video: 10:00) - Demo of the ternary operator in C and pointers.
+* 
 
