@@ -76,8 +76,8 @@ int main(){
 
 	// To find the address of the middle element, we can compute the distance between the 
 	// two elements, divide it by 2, and add that amount to the first element.
-	// The "value of" or indirection operater, *, returns the element.
-	// pointed at by r.  This is the element between b2[2] and b2[5].
+	// The "value of" or indirection operator, *, returns the element
+	// pointed to by r.  This is the element between b2[2] and b2[5].
 
 	double *r = p+(q-p)/2;
 	for (int i = 0; i<6; i++){
@@ -91,7 +91,7 @@ int main(){
 	printf("Is q > p? %d\n", q > p); // Comparing positions.
 	printf("Is *p > a2[1]? %d\n", *p > a2[1]); //Comparing values.
 
-	// We use a pointer arithmetic to iterate through an array.
+	// We use pointer arithmetic to iterate through an array.
 	double sum = 0.0;
 	for (p = &a2[0]; p < &a2[6]; p++) {
 		sum += *p; //Add value at p to sum.
