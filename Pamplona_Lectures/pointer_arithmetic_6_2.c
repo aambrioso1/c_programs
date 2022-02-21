@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// From Week6_Lecture2 (Video 12:09-34)
+// From Week6_Lecture2 (Video 12:09-41)
 // Demonstrates pointer arithmetic
 
 // Three operations are supported:
