@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// From Week6_Lecture2 (Video 105:30)
+// From Week6_Lecture2 (Video 59:00)
 
 // Write a program that compares elements of two arrays a and b
 // and stores the element in array c that are in both and and b.

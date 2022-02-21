@@ -18,5 +18,8 @@ Programs for COP 3514 Lectures are in their own folder.
 ##### Week 6: Second Lecture
 * find_two_largest_6_2.c (video: 1:00)
 * ternary.c (video: 10:00) - Demo of the ternary operator in C and pointers.
-* 
+* pointer_arithmetic_6_2.c (Video 12:09-58:56) - This one has extensive notes and extra examples.
+* compare_array_6_2.c (video: 59:00)
+* find_elements_6_2.c (Video 105:30)
+
 
