@@ -6,11 +6,11 @@ Programs for COP 3514 Lectures are in their own folder.
 
 ### Pointers
 
-##### Week 5 (Complete starting at pointer content)
+##### Week 5 (Starts at pointer content)
 * pointer_exercise_5_1_1
 * pointer_exercise_5_1_2
 
-##### Week 6: First Lecture (Complete)
+##### Week 6: First Lecture
 * max_pointers_6.1.c
 * find_largest_return_pointer_6_1.c (video: 53:54)
 * find_middle_6_1.c
