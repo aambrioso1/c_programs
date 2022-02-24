@@ -22,4 +22,7 @@ Programs for COP 3514 Lectures are in their own folder.
 * compare_array_6_2.c (video: 59:00)
 * find_elements_6_2.c (Video 105:30)
 
+##### Week 7: First Lecture
+* class_7_1.c (draft version) (video: near beginning of video)
+
 
