@@ -24,5 +24,6 @@ Programs for COP 3514 Lectures are in their own folder.
 
 ##### Week 7: First Lecture
 * class_7_1.c (draft version) (video: near beginning of video)
+* store_zeros_7_1.c (video: 47:14)
 
 

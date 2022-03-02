@@ -11,7 +11,6 @@ int main() {
 	int i = 0;
 	int a[5] = {0,1,2,3,4};
 	int *p;
-	p = &a[2];
 
 	// Thes examples show precedence ruls for * and ++
 	
@@ -21,6 +20,7 @@ int main() {
 	}
 	printf("\n");
 
+	p = &a[2];
 	printf("*p++ = %d, *p = %d\n", *p++, *p);
 	printf("*++p = %d, *p = %d\n", *++p, *p);
 
