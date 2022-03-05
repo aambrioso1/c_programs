@@ -26,4 +26,8 @@ Programs for COP 3514 Lectures are in their own folder.
 * class_7_1.c (draft version) (video: near beginning of video)
 * store_zeros_7_1.c (video: 47:14)
 
+##### Week 8:
+
+* comand_line_arguments_8_2.c - Demo of basics of processing command line arguments
+
 
