@@ -28,6 +28,6 @@ Programs for COP 3514 Lectures are in their own folder.
 
 ##### Week 8:
 
-* comand_line_arguments_8_2.c - Demo of basics of processing command line arguments
+* command_line_arguments_8_2.c - Demo of basics of processing command line arguments.
 
 
