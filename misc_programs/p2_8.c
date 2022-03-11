@@ -10,11 +10,13 @@ void max_min(int *a, int n, int *max, int *min);
  
  int main(void) {
  
-    int a[]={6, 8, 14, 5, 9, 23, 45, 65};
+    int a[]={6, 8, 14, 5, 9, 23, 45, 65, -2, 256, 32};
  
     int max_a, min_a;
     
-    max_min(a, 8, &max_a, &min_a);
+    int N = 11; // Number of items in a
+
+    max_min(a, N, &max_a, &min_a);
 
     printf("max is %d and min is %d\n", max_a, min_a);
     
@@ -24,11 +26,11 @@ void max_min(int *a, int n, int *max, int *min);
 void max_min(int *a, int n, int *max, int *min) {
     int *p;
     
-    // max = min = *a;   This is the line that causes the segmentation fault
+    // max = min = *a;   This is the line that causes the segmentation fault.
     // max and min are pointers but *a is an integer value.
     
-    // The correct code below assigns the integer *a to memory pointed to by *max and *min.
-    // This initialize max and min for the search algorithm.
+    // The correct code below assigns the integer *a to address pointed to by *max and *min.
+    // This initializes *max and *min for the search algorithm.
     *max = *min = *a;  
 
     for (p = a; p < a + n; p++) {
