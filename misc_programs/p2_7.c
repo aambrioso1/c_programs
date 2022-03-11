@@ -20,13 +20,19 @@ int main() {
 
 }
 
-// We need to analyze the nested for loopg.   The pointer p1 points to 'c'.
-// Then we advance p2 through the second string looking for another c.
-// We find one so we break out of the the inner loop and advance p1 to 'a'
-// Ten p2 move through its string and it find a, breaks out the loop,
-// p1 advances to b.   The inner loop iterates and since b is not in the 
-// second string the p2 will advance to the ending null character.   
-// The control drops out the nested loops.   Now s points to the beginning
-// of the first string and p1 points to b the first letter in the string 
-// that is not part of the second string.   The pointer arithmetic calculation
-// p1 - s compute how far p1 advanced before one of its character have advance.
+
+/* The program computes the position of the first character in the first string that is not in
+the second string.
+
+We need to analyze the nested for loops.   The pointer p1 points to 'c'.
+Then we advance p2 through the second string looking for another c.
+We find one so we break out of the the inner loop and advance p1 to 'a'
+Then p2 moves through its string until it finds a matching 'a' and breaks out of the loop.  
+Then p1 advances to b.   The inner loop iterates.  Since b is not in the 
+second string p2 will advance to the ending null character.   
+Program flow drops out the nested loops.   Now s points to the beginning
+of the first string and p1 points to the 'b' in s which is the first letter in the string 
+that is not part of the second string.   The pointer arithmetic calculation
+p1 - s compute how far p1 has advanced.   
+
+*/

@@ -30,4 +30,18 @@ Programs for COP 3514 Lectures are in their own folder.
 
 * command_line_arguments_8_2.c - Demo of basics of processing command line arguments.
 
+## Problems from Test 2 Practice Test 
+
+Located in misc_programs folder
+
+* p2_1.c - Problem 1 and Problem 2 with notes.
+* p2_3.c - Problem 3 with notes.
+* p2_4.c - Problem 4 with notes.
+* p2_5.c - Problem 5 with notes.
+* p2_6.c - Problem 6 with notes.
+* p2_7.c - Problem 7 with notes.
+* p2_8.c - Problem 8 with notes.
+
+
+
 
