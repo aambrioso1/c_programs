@@ -27,6 +27,6 @@ int main() {
 // p1 advances to b.   The inner loop iterates and since b is not in the 
 // second string the p2 will advance to the ending null character.   
 // The control drops out the nested loops.   Now s points to the beginning
-// of the first string and p1 points to b the first letter in the first string 
-// that is not part of the second string.   The pointer arithmetic calculation is
-// p1 - s
+// of the first string and p1 points to b the first letter in the string 
+// that is not part of the second string.   The pointer arithmetic calculation
+// p1 - s compute how far p1 advanced before one of its character have advance.
