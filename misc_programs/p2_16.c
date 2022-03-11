@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-/***** Problem 9 on Practice Test 2 *****/
+/***** Problem 16 on Practice Test 2 *****/
 
-// The main thing to learn here is how the points p is used to iterate through the string.
-// Note the a pointer to the original string is sent to the function and the string itself is changed.
+// The main thing to learn here is how the pointer p is used to iterate through the string.
+// Note the pointer to the original string is sent to the function and the string itself is changed.
 // Without the pointer p the change to the string within the function would be temporary.
 
 void replace(char *str, char x, char y);

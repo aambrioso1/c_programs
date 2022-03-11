@@ -2,7 +2,7 @@
 
 /* Find the cause of the segmentation fault in this program.
 
-Cause:  Line 19 in the Test Review.   This is line 26 in my code.
+Cause:  Line 19 in the Test Review.   This is line 29 in my code.   Correct in line 34.
 
 */
 
@@ -29,7 +29,7 @@ void max_min(int *a, int n, int *max, int *min) {
     // max = min = *a;   This is the line that causes the segmentation fault.
     // max and min are pointers but *a is an integer value.
     
-    // The correct code below assigns the integer *a to address pointed to by *max and *min.
+    // The corrected code below assigns the integer *a to the address pointed to by *max and *min.
     // This initializes *max and *min for the search algorithm.
     *max = *min = *a;  
 
@@ -41,4 +41,9 @@ void max_min(int *a, int n, int *max, int *min) {
         }
     }
 
+/********************* OUTPUT **************************
+
+max is 256 and min is -2
+
+********************************************************/
 

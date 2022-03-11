@@ -43,23 +43,14 @@ int main(void) {
     void swap(int *x, int *y) { 
         int tmp;
         tmp = *x;
-        *y=*x;  // This changes *y with no way to swap its original value it to *x.
+        *y=*x;  // This changes *y with no way to swap its original value to *x.
         *x=tmp;  
     }
     ******/
 
 /********************* OUTPUT **************************
 
-Value of strcmp(s1, s2) < 0 = 0
-s1 = Program
-s1 = DesignProgram
-
-If we change the line strcpy(s1, "Program"); to strcpy(s1, "Copmuter") the output is this:
-
-Value of strcmp(s1, s2) < 0 = 1
-s1 = ComputerDesign
-s1 = Design
-
-Why?
+Before: x = 11 and y = 13
+After:  x = 13 and y = 11
 
 ********************************************************/

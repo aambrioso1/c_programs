@@ -3,9 +3,9 @@
 
 /***** Problem 11 on Practice Test 2 
  *   
- * A good was to approach these style of multiple question is to scan the 
+ * A good way to approach these style of multiple questions is to scan the 
  * various choices and observe their differences.  For this problem the difference is
- * in the initialization of i in for loop.   This leads to an easy solution.  
+ * in the initialization of i in the for loop.   This leads to an easy solution.  
  * We don't what to print argv[0], the command, this eliminates (a) and (c).
  * argv[argc] does not exist because the array indexing starts at 0.   
  * That eliminates (b).
@@ -61,6 +61,6 @@ int main(int argc, char *argv[]) {
 *
 * Input: ./a.out computer science
 * 
-* Output :  science computer
+* Output:  science computer
 * 
 ********************************************************/

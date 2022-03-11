@@ -3,9 +3,10 @@
 
 /***** Problem 15 on Practice Test 2 
  
-total_sec is a time represented as the number of seconds since midnight. hr, min, and
-sec are pointers to variables in which the function will store the equivalent time in hours (0 -23), 
-minutes (0-59), and seconds (0-59), respectively.
+total_sec is a time represented as the number of seconds since midnight. The variables hr, min, and
+sec will store the equivalent time in hours (0 -23), 
+minutes (0-59), and seconds (0-59), respectively.   We will use points to change the values of the variable 
+in place.
 
 *****/
 
@@ -22,6 +23,7 @@ int main(void) {
 
     split_time(seconds, &hr, &min, &sec);
     printf("hours: %d, min: %d, secs: %d\n", hr, min, sec);
+    // Where check our answer by adding up all the seconds again.
     printf("The total number of seconds is: %d", 3600 * hr + 60 * min + sec);
 
     return 0;
@@ -37,6 +39,7 @@ void split_time(int total_sec, int *hr, int *min, int *sec) {
 
 /********************* OUTPUT **************************
 
-
+hours: 27, min: 46, secs: 40
+The total number of seconds is: 100000
 
 ********************************************************/
