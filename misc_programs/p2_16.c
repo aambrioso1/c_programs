@@ -3,63 +3,35 @@
 
 /***** Problem 9 on Practice Test 2 *****/
 
-// Note the initialization of the strings.
+// The main thing to learn here is how the points p is used to iterate through the string.
+// Note the a pointer to the original string is sent to the function and the string itself is changed.
+// Without the pointer p the change to the string within the function would be temporary.
 
-void swap(int *x, int *y);
+void replace(char *str, char x, char y);
 
 int main(void) {
 
-    int x=11, y=13;
+    char s[21] = "Pamplona";
 
-    printf("Before: x = %d and y = %d\n", x, y);
-    swap(&x, &y);
-    printf("After:  x = %d and y = %d\n", x, y);
+    printf("Before: %s\n", s);   
+    replace(s, 'a', 'o');
+    printf("After: %s\n", s);
 
     return 0;
 }
 
+void replace(char *str, char x, char y) {
 
-    /****** 
-    // a)    
-    void swap(int *x, int *y) { 
-        int *tmp;
-        tmp = x; // This is incorrect.   We need to swap the values not the addresses.
-        x=y;
-        y=tmp;
+    for(char *p = str; *p != '\0'; p++) {
+        if (*p == x) {
+            *p = y;
+        }
     }
-    *****/
-    
-    // b)  This is the correct answer.
-
-    void swap(int *x, int *y) { 
-        int tmp;
-        tmp = *x;
-        *x=*y;
-        *y=tmp;
-    }
-
-    /****** 
-    // c)
-    void swap(int *x, int *y) { 
-        int tmp;
-        tmp = *x;
-        *y=*x;  // This changes *y with no way to swap its original value it to *x.
-        *x=tmp;  
-    }
-    ******/
+}
 
 /********************* OUTPUT **************************
 
-Value of strcmp(s1, s2) < 0 = 0
-s1 = Program
-s1 = DesignProgram
-
-If we change the line strcpy(s1, "Program"); to strcpy(s1, "Copmuter") the output is this:
-
-Value of strcmp(s1, s2) < 0 = 1
-s1 = ComputerDesign
-s1 = Design
-
-Why?
+Before: Pamplona
+After: Pomplono
 
 ********************************************************/

@@ -1,65 +1,42 @@
 #include <stdio.h>
 #include <string.h>
 
-/***** Problem 9 on Practice Test 2 *****/
+/***** Problem 15 on Practice Test 2 
+ 
+total_sec is a time represented as the number of seconds since midnight. hr, min, and
+sec are pointers to variables in which the function will store the equivalent time in hours (0 -23), 
+minutes (0-59), and seconds (0-59), respectively.
+
+*****/
 
 // Note the initialization of the strings.
 
-void swap(int *x, int *y);
+
+void split_time(int total_sec, int *hr, int *min, int *sec);
 
 int main(void) {
+    
 
-    int x=11, y=13;
+    int seconds = 100000;
+    int hr, min, sec;
 
-    printf("Before: x = %d and y = %d\n", x, y);
-    swap(&x, &y);
-    printf("After:  x = %d and y = %d\n", x, y);
+    split_time(seconds, &hr, &min, &sec);
+    printf("hours: %d, min: %d, secs: %d\n", hr, min, sec);
+    printf("The total number of seconds is: %d", 3600 * hr + 60 * min + sec);
 
     return 0;
 }
 
+void split_time(int total_sec, int *hr, int *min, int *sec) {
+    *hr = total_sec / 3600;
+    *min = total_sec % 3600 / 60;
+    // *sec = total_sec % 3600 % 60
+    *sec = total_sec % 60; // This is shorter than the solution on the key.
+}
 
-    /****** 
-    // a)    
-    void swap(int *x, int *y) { 
-        int *tmp;
-        tmp = x; // This is incorrect.   We need to swap the values not the addresses.
-        x=y;
-        y=tmp;
-    }
-    *****/
-    
-    // b)  This is the correct answer.
-
-    void swap(int *x, int *y) { 
-        int tmp;
-        tmp = *x;
-        *x=*y;
-        *y=tmp;
-    }
-
-    /****** 
-    // c)
-    void swap(int *x, int *y) { 
-        int tmp;
-        tmp = *x;
-        *y=*x;  // This changes *y with no way to swap its original value it to *x.
-        *x=tmp;  
-    }
-    ******/
 
 /********************* OUTPUT **************************
 
-Value of strcmp(s1, s2) < 0 = 0
-s1 = Program
-s1 = DesignProgram
 
-If we change the line strcpy(s1, "Program"); to strcpy(s1, "Copmuter") the output is this:
-
-Value of strcmp(s1, s2) < 0 = 1
-s1 = ComputerDesign
-s1 = Design
-
-Why?
 
 ********************************************************/

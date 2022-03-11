@@ -2,6 +2,8 @@
 
 /***** Problem 13 on Practice Test 2 *****/
 
+// The answer is (a).   The functions reads in a line of input but skips any white space at the beginning.
+
 int read_line(char *str, int n) {
     int ch, i = 0;
     while((ch = getchar()) == ' ');  // Skips initial white space.

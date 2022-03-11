@@ -20,7 +20,8 @@
 #include <stdio.h>
 int main(int argc, char *argv[]) {
     int i;
-    for (i = argc; i >= 0; i--) // This will crash since argv[argc] does not exist.  Also argv[0] is the command.
+    for (i = argc; i >= 0; i--)
+    // This will crash since argv[argc] does not exist.  Also argv[0] is the command.
         printf("%s ", argv[i]);
     printf("\n");
     return 0;
@@ -30,7 +31,8 @@ int main(int argc, char *argv[]) {
 int main(int argc, char *argv[]) {
 int i;
  for (i = argc; i > 0; i--)
- printf("%s ", argv[i]); // This will crash since argv[argc] does not exist.
+ // This will crash since argv[argc] does not exist.
+ printf("%s ", argv[i]); 
  printf("\n");
  return 0;
 }
@@ -38,7 +40,8 @@ int i;
 #include <stdio.h>
 int main(int argc, char *argv[]) {
 int i;
- for (i = argc - 1; i >= 0; i--) // This will print argv[0] which is the command. 
+ for (i = argc - 1; i >= 0; i--) 
+ // This will print argv[0] which is the command. 
  printf("%s ", argv[i]);
  printf("\n");
 */
@@ -46,7 +49,8 @@ int i;
 #include <stdio.h>
 int main(int argc, char *argv[]) {
     int i;
-    for (i = argc -1; i > 0; i--) //This will only print the arguments after the command.   They will be printed in reverse order.
+    for (i = argc -1; i > 0; i--)
+    // This will only print the arguments after the command.   They will be printed in reverse order.
         printf("%s ", argv[i]);
     printf("\n");
     return 0;
