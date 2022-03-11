@@ -41,6 +41,20 @@ Located in misc_programs folder
 * p2_6.c - Problem 6 with notes.
 * p2_7.c - Problem 7 with notes.
 * p2_8.c - Problem 8 with notes.
+* p2_9.c - Problem 9 with notes.
+* p2_10.c - Problem 10 with notes.
+* p2_11.c - Problem 11 with notes.
+* p2_12.c - Problem 12 with notes.
+* p2_13.c - Problem 13 with notes.
+* p2_14.c - Problem 14 with notes.
+* p2_15.c - Problem 15 with notes.
+* p2_16.c - Problem 16 with notes.
+
+The problem below are not completed yet
+* p2_17.c - Problem 17 with notes.
+* p2_18.c - Problem 18 with notes.
+* p2_19.c - Problem 19 with notes.
+* p2_20.c - Problem 20 with notes.
 
 
 
