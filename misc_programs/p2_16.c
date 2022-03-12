@@ -11,7 +11,20 @@ void replace(char *str, char x, char y);
 
 int main(void) {
 
-    char s[21] = "Pamplona";
+
+    /* There is a nice article on strings in C here: https://www.geeksforgeeks.org/strings-in-c-2/
+
+    Here are ways to declare a string according to the article
+
+    char str[] = "Pamplona";
+    char str[21] = "Pamplona";
+    char str[] = {'P', 'a', 'm', 'p', 'l', 'o', 'n', 'a', '\0'};
+    char str[9] = {'P', 'a', 'm', 'p', 'l', 'o', 'n', 'a', '\0'};
+    
+    */
+
+    char s[9] = {'P', 'a', 'm', 'p', 'l', 'o', 'n', 'a', '\0'};
+    // char s[21] = "Pamplona";
 
     printf("Before: %s\n", s);   
     replace(s, 'a', 'o');
