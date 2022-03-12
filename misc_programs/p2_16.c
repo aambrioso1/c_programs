@@ -14,7 +14,7 @@ int main(void) {
 
     /* There is a nice article on strings in C here: https://www.geeksforgeeks.org/strings-in-c-2/
 
-    Here are ways to declare a string according to the article
+    Here are four ways to declare a string according to the article:
 
     char str[] = "Pamplona";
     char str[21] = "Pamplona";
