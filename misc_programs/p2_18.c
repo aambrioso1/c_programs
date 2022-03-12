@@ -8,7 +8,7 @@ void get_extension(char *file_name, char *extension);
 int main() {
     //File name: "Go ahead and make my.day"
     //expected extension: "day"
-    char fileName[] = {'G','o',' ','a','h','e','a','d',' ','m','a','k','e',' ','m','y','.','d','a','y','\0'};
+    char fileName[] = "Go ahead and make my.day";
     char ext[10] = {'\0'};
     get_extension(fileName,ext);
     printf("%s\n",ext);
