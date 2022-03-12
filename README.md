@@ -49,8 +49,6 @@ Located in misc_programs folder
 * p2_14.c - Problem 14 with notes.
 * p2_15.c - Problem 15 with notes.
 * p2_16.c - Problem 16 with notes.
-
-The problem below are not completed yet
 * p2_17.c - Problem 17 with notes.
 * p2_18.c - Problem 18 with notes.
 * p2_19.c - Problem 19 with notes.
