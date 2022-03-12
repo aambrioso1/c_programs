@@ -11,7 +11,7 @@ int main() {
     char fileName[] = "Go ahead and make my.day";
     char ext[10] = {'\0'};
     get_extension(fileName,ext);
-    printf("%s\n",ext);
+    printf("The extension of %s is %s\n", fileName, ext);
 
 
     char s1[21] = "alexander_text.txt";
@@ -26,13 +26,14 @@ int main() {
     get_extension(s2, ext2);
     get_extension(s3, ext3);
 
-    printf("The extension of %s is %s\n", &s1, ext1);
-    printf("The extension of %s is %s\n", &s2, ext2);
-    printf("The extension of %s is %s\n", &s3, ext3);
+    printf("The extension of %s is %s\n", s1, ext1);
+    printf("The extension of %s is %s\n", s2, ext2);
+    printf("The extension of %s is %s\n", s3, ext3);
 
     return 0;
 }
 
+/*
 void get_extension(char *file_name, char *extension){
 
     char *p = file_name;
@@ -53,7 +54,7 @@ void get_extension(char *file_name, char *extension){
     } 
     *extension = '\0';  // Add a null character to the end of the extension string. 
 }
-
+*/
 
 void get_extension(char *file_name, char *extension) {
     char *p;
