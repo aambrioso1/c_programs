@@ -1,27 +1,8 @@
-/* Notes for Chapter 22
-
-Three standard streams;
-(1) stdin - standard input - default:  Keyboard
-(2) stdout - standard output - default: screen
-(3) stderr - standard erro - default: screen
-
-These can be change by indirection.  For example:
-
-demo >out.dat
-
-will write output data to out.dat
-
-Text and binary files are supported by <stdio.h>
-
-
-
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-
+	// The program checks if a file can be opened
 	FILE *fp;
 
 	if (argc != 2) {
@@ -39,10 +20,13 @@ int main(int argc, char *argv[]) {
 }
 
 /******** Output ************
+ 
+ Note that I compiled the file to a.exe so the usage is a.exe filename.
 
 > ./a.exe demo
 demo can't be opened
 > ./a.exe chapter_22.c
 chapter_22.c can be opened
+
 
 *****************************/
