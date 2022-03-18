@@ -32,7 +32,7 @@ Programs for COP 3514 Lectures are in their own folder.
 
 ## Problems from Test 2 Practice Test 
 
-Located in misc_programs folder
+Located in misc_programs/practice_test_2
 
 * p2_1.c - Problem 1 and Problem 2 with notes.
 * p2_3.c - Problem 3 with notes.
@@ -53,6 +53,11 @@ Located in misc_programs folder
 * p2_18.c - Problem 18 with notes.
 * p2_19.c - Problem 19 with notes.
 * p2_20.c - Problem 20 with notes.
+
+## Notes and programs from the textbook
+
+* chapter_22.c - Notes and programs from Chapter 22 on Input/Output
+
 
 
 
