@@ -1,29 +1,39 @@
 // Week 9 Lecture 1
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 
-// modify using pointers
-int main(int arc, char *argv[]){
 
-		//strcat
+int main(int argc, char *argv[]) {
+	// Copies file file to another
+	// Usage: ./a.exe file1 file2
+	
+	FILE *source_fp, *dest_fp;
+	int ch;
 
-// Check if command line argument is a planet
-	char planets[][8] = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"};
+	if (argc != 3) {
+		fprintf(stderr, "usage:  fcopy source dest\n");
+		exit(EXIT_FAILURE);
+	}
 
-	int check = 0;
-	for (int i=0; i<8; i++) {
-		if(strcmp(argv[i], planets[i]) == 1)  {
-			check = 1;
-			break;
-		}
+	if ((source_fp = fopen(argv[1], "rb")) == NULL) {
+		fprintf(stderr, "Can't open %s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
 
-	if (check)
-		printf("Yes\n");
-	else
-		printf("No\n");
+	if ((dest_fp = fopen(argv[2], "wb")) == NULL) {
+		fprintf(stderr, "Can't open %s\n", argv[2]);
+		fclose(source_fp);
+		exit(EXIT_FAILURE);
+	}
 
+	while ((ch = getc(source_fp)) != EOF)
+		putc(ch, dest_fp);
+	
+	fclose(source_fp);
+	fclose(dest_fp);
 	return 0;
+}
 
 	}
 
