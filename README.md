@@ -54,9 +54,24 @@ Located in misc_programs/practice_test_2
 * p2_19.c - Problem 19 with notes.
 * p2_20.c - Problem 20 with notes.
 
-## Notes and programs from the textbook
 
+##### Week 11: First Lecture - Working with files
+* canopen.c - checks is a file can be opened
+* fcopy.c -  contcopysent of one file, file1, to another, file2.  Usage: ./a.exe file1 file2
+* my_cat - prints contents of a file to stdout
+Please note that the notes for the first lecture are not complete but the notes for Lecture 2 are.
+The notes for Lecture 2 are more useful for Project 6 so I finished them.
+
+##### Week 11: Second Lecture - Working with files (continued)
+* dumbbells.c - uses the file dumbbells.txt to demonstrate opening a file to access and processing information on that file. (18:32)
+* read_animals_csv.c - demonstrates reading a file line by line using conversion specifiers to skip commas. (45:45)
+* grades.c - demonstrates writing to a file. (59:30)
+* selection_sort.c - opens a file, numbers.txt, of numbers, reads the numbers into an array, sorts the array, and writes the sorted numbers to a another file. (1:01:38)
+
+
+## Notes and programs from the textbook
 * chapter_22.c - Notes and programs from Chapter 22 on Input/Output
+
 
 
 

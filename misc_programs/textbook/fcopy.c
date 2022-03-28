@@ -2,7 +2,9 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	// Copies f1.c to f2.c
+	// Copies file file to another
+	// Usage: ./a.exe file1 file2
+	
 	FILE *source_fp, *dest_fp;
 	int ch;
 

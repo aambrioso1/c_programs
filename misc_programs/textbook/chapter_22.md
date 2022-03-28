@@ -83,6 +83,10 @@ Input functions
 
 # START HERE
 * fgetpos -
+* fseek
+* fsetpos
+* ftell
+* rewind
 
 
 
@@ -91,7 +95,7 @@ Input functions
 
 Output Functions
 * sprintf(char array, format string, arguments) - works like printf but writes output to a character array
-* snprintf(char array, size, format string, arguments) - like sprintf but only up size characters are written
+* snprintf(char array, size, format string, arguments) - like sprintf but the numbers of characters are written is limited to size
 
 
 

@@ -3,6 +3,7 @@
 
 int main(int argc, char *argv[]) {
 	// The program checks if a file can be opened
+	
 	FILE *fp;
 
 	if (argc != 2) {
