@@ -44,7 +44,7 @@ The notes for Lecture 2 are more useful for Project 6 so I finished them.
 * dumbbells.c - uses the file dumbbells.txt to demonstrate opening a file to access and processing information on that file. (18:32)
 * read_animals_csv.c - demonstrates reading a file line by line using conversion specifiers to skip commas. (45:45)
 * grades.c - demonstrates writing to a file. (59:30)
-* selection_sort.c - opens a file, numbers.txt, of numbers, reads the numbers into an array, sorts the array, and writes the sorted numbers to a another file. (1:01:38)
+* selection_sort.c - opens a file, numbers.txt, reads the numbers in the file to an array, sorts the array, and writes the sorted numbers to a another file. (1:01:38)
 
 ## Problems from Test 2 Practice Test 
 
