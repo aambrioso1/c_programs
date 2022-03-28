@@ -14,14 +14,17 @@ char str[MAX_LEN+1];
 FILE* pFile;
 pFile = fopen("test.txt", "r");
 if (pFile == NULL){
-printf ("Error opening file\n");
-return 1;
+	printf ("Error opening file\n");
+	return 1;
 }
+
 while ( fgets (str, MAX_LEN+1, pFile ) != NULL )
-printf ("%s", str);
-rewind(pFile);
+	printf ("%s", str);
+rewind(pFile);  // Comment this line in and out to see the effect of rewind.
+
 while ( fgets (str, MAX_LEN+1, pFile ) != NULL )
-printf ("%s", str);
+	printf ("%s", str);
+
 fclose(pFile);
 return 0;
 }

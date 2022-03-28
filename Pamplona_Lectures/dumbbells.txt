@@ -1,0 +1,10 @@
+2 blue 16
+10 grey 16
+5 sliver 28
+1 black 12
+15 pink 20
+8 orange 22
+20 black 12
+4 green 18
+12 red 16
+3 purple 24

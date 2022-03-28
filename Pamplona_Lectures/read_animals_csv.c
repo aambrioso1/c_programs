@@ -1,5 +1,10 @@
+// Class 11.2 - Video:  47:20
+
+// Demonstrates conversion specifiers
+
 #include <stdio.h>
 #include <string.h>
+
 
 int main(){
 
@@ -20,6 +25,7 @@ int main(){
 		return 0;
 	}
 	while(!feof(csv_file)&&!ferror(csv_file)){
+		// Note the use of conversion specifies to skip commmas.
 		if(fscanf(csv_file, "%[^,], %[^,], %[^,], %d, %lf\n",name, species, gender, &age, &weight)==5){  	
 			printf("%s %s %s %d %.1f", name, species, gender, age, weight);
 		}	

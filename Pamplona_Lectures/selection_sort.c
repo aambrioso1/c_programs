@@ -2,49 +2,40 @@
  */
 
 #include <stdio.h>
-#define N 10
 
 void selection_sort(int a[], int n);
 
 int main(void)
 {
-  int i;
+  int i, N=0, x;
 
   FILE *fp;
   fp = fopen("numbers.txt", "r");
-  
+
   // What N will work for any file?
-  while(fscanf(fp, %d) == 1) {
+
+  // This while loop is used to decide how big to make the array of numbers
+    while(fscanf(fp, "%d", &x) == 1) {
      N++;
    }
 
   int a[N];
 
-  rewind(fp);
+  rewind(fp);  // We are at the end of the file so we rewind to the beginning for reading.
 
-
-  FILE *fp;
-  fp = fopen("sorted_numbers.txt", "r");
-
-  for(int i = 0; i<N;i++){
-      fprintf(fp, "%d\n");
-  }
-  int a[N];
-  }
-
-
-  printf("Enter %d numbers to be sorted: ", N);
   for (i = 0; i < N; i++)
-    fscanf("%d", &a[i]);
+    fscanf(fp, "%d", &a[i]);
+  fclose(fp);
+
 
   selection_sort(a, N);
 
-  printf("In sorted order:");
+  fp = fopen("sorted_numbers.txt","w");
   for (i = 0; i < N; i++)
-    printf(" %d", a[i]);
-  printf("\n");
+    fprintf(fp, "%d\n", a[i]);
+  fclose(fp);
 
-  return 0;
+return 0;
 }
 
 void selection_sort(int a[], int n)
