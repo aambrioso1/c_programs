@@ -45,6 +45,32 @@ One of the most common combinations of arrays and structures is an array of stru
 struct part inventory[100]
 ```
 
+* inventory.c - uses an array of part structs to implement a simple database.   Code comes from the textbook:
 
+```
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ * readline.c (Chapter 16, page 395)                     *
+ *********************************************************/
+ ```
+
+* problem with scanf and reading multiple lines (video: 1:09:27)
+Note that using scanf to read numbers and strings the newlines will not be read.   Need to read and consume the newline or use C's readline function or create your own as was done for inventory.c.
+
+* int isspace(int c) function checks if a character is a space.  This function is in ctype.h library. (1:10:15)
+
+### Standard whitespace
+
+* `` 	- space
+* '\n' 	- newline
+* '\t'	- horizontal tab
+* '\r'	- carriage return
+* '\f'	- line feed
+* '\v'	- vertical tab
 
 
