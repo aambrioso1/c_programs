@@ -37,7 +37,14 @@ In particular == and != will not work.
 
 colors.c - an application that uses a structure to store and change color information (38:00 - 49:00)
 
-******* Start at 49:00 ***********************
+### Arrays of Structures
+
+One of the most common combinations of arrays and structures is an array of structures.   This kind of a array can servce as a simple database (Project 8!).   An array of 100 part structures can be declared as follows:
+
+```
+struct part inventory[100]
+```
+
 
 
 
