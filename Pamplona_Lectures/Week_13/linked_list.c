@@ -9,6 +9,8 @@ int duplicates(struct node *list);
 void clear_list(struct node *list);
 struct node *find_largest(struct node *list);
 
+int count_n(struct node *list, int n);
+
 //1.
 struct node {
 	int value;          /* data stored in the node  */
@@ -22,17 +24,23 @@ int main()
  	struct node *first = NULL;  // 2. We initalize the list as NULL pointer.  This is the first element of the list.
 
 	/* inserting nodes */
-	first = add_to_list(first, 3);
-	first = add_to_list(first, 64);
-	first = add_to_list(first, 98);
-	first = add_to_list(first, 3);
-    first = add_to_list(first, 64);
-	first = add_to_list(first, 3);
-	first = add_to_list(first, 136);
-	first = add_to_list(first, 7);
-	first = add_to_list(first, 98);
+	int x;
 
+	for (;;) {
+		printf("Enter x (>0):");
+		scanf("%d", &x);
+		if(x <= 0)
+			break;
+		first = add_to_list(first, x);
+	}
 	print_list(first);
+
+	int n;
+
+	printf("Enter n: ");
+	scanf("%d", &n);
+	
+	printf("%d appears %d times", n, count_n(first,n));
 	
 	//add code here
  		
@@ -46,7 +54,7 @@ int main()
 
 }
 
-/*** Create a list structure ***/
+/*** Function to add a node to the list ***/
 struct node *add_to_list(struct node *list, int n) 
 {
 	// 3. Create a new node
@@ -118,6 +126,20 @@ int duplicates(struct node *list){
        //add code here
        return 0;
 
+}
+
+
+int count_n(struct node *list, int n)
+{
+	  struct node *p;
+
+	  int count = 0;
+
+	  for (p = list; p != NULL; p = p->next)
+	    if (p->value == n)
+	      	count++;
+
+	  return count;
 }
 
 //struct node *add_sorted_list
