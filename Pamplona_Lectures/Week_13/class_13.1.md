@@ -31,7 +31,7 @@ See the following number in the code.
 6. Insert the node into the list.  In this case we are adding it to the beginning of the list.
 
 
-Note are up to 28:00
+Notes go up to 28:00 in the video.
 
 Add nodes with a function ...
 
