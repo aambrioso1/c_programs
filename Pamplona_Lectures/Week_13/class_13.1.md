@@ -53,7 +53,7 @@ p==list
 
 How do we know check that p is pointing to the last node of the linked list called list?
 
-````
+```
 p = p->next;
 ```
 
