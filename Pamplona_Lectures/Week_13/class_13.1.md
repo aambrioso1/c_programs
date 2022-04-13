@@ -35,34 +35,37 @@ See the following number in the code.
 
 Given this structure:
 
-'''
-struct node {
-	int value;          /* data stored in the node  */
-	struct node *next;  /* pointer to the next node */
-};
-'''
+```
+ struct node {
+	 int value;          /* data stored in the node  */
+	 struct node *next;  /* pointer to the next node */
+ };
+```
 
 
 How do we know check that p is pointing to the first node of the linked list called list?
 
 * Answer:  
 
-'''
+```
 p==list
-'''
+```
 
 How do we know check that p is pointing to the last node of the linked list called list?
 
-'''
+````
 p = p->next;
-'''
+```
 
 How do we iterate through the nodes of a linked list:
 
+```
 for(p = list; p! == NULL; p = p->next) {
 	... body of for ...
 }
+```
 
+##### Searching a Linked List (video:  43:27)
 
 
 
