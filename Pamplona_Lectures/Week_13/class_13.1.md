@@ -1,4 +1,4 @@
-##### Week 13 Lecture 1
+# Week 13 Lecture 1
 
 
 ### Linked Lists
@@ -15,12 +15,14 @@
 * one disadvantage is that random access is not possible.
 
 
-### Setting up a linked list: (video: 11:00 - 28:00)
+##### Setting up a linked list: (video: 11:00 - 28:00)
 
 * linked_list.c - implements simple linked list of nodes containing a single value.
 
 Note the numbers corresponde to numbers in the program linked_list.c
-See the 
+
+See the following number in the code.
+
 1. Set up a structure that represent a single node.
 2. We initalize the list as NULL pointer.  This is the first element of the list.
 3. Create a new node.
