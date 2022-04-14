@@ -21,15 +21,16 @@
 
 Note the numbers corresponde to numbers in the program linked_list.c
 
-See the following number in the code.
+See the following numbers in the code for linked_list.c;
 
 1. Set up a structure that represent a single node.
 2. We initalize the list as NULL pointer.  This is the first element of the list.
 3. Create a new node.
 4. Allocate memory for the new node.
 5. Store vallues in the new node.
-6. Insert the node into the list.  In this case we are adding it to the beginning of the list.
+6. Insert the node into the list.  In this case we are adding it to the BEGINNING of the list.
 
+Note that for Project 8 we are supposed to add the notes to the END of the list.
 
 ##### Add nodes with a function (video: 28:00)
 
@@ -68,6 +69,26 @@ for(p = list; p! == NULL; p = p->next) {
 ##### Searching a Linked List (video:  43:27)
 
 
+```
+// This function returns a pointer to the node containing n; otherwise it returns a null pointer.
+struct node *search_list(struct node *list, int n):  
+{
+	struct node *p;
+
+	for (p = list; p != NULL; p = p->next)
+		if (p->value == n)
+			return p;
+	return NULL;
+}
+```
+
+We can use this function to count elements by passing the pointer of the next element to the function once when we find a element in the list matching n.  (video 49:00)
+
+##### Check the order of the numbers inserted into the linked list. (video 55:50)
+
+* THe numbers appear in reverse order since we insert elements at the top of the list.
+
+* clear_list function - Release the memory used to store the link list.  See the function in the linked_list.c file.   Need to be careful with the function since you do not want to release memory then use it later. (video: 58:43)
 
 
 
