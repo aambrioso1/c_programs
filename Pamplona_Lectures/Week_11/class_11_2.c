@@ -18,7 +18,7 @@ See dumbbells.c and dumbbells.txt for an example of fscanf().
 The [...] conversion specifier for fscanf allows use to control what is input.
 Can use format input to stop reading if something is wrong with the input.
 
-fscanf(fp, "%["^\n]\n", str) matches any character that is not a newline until newline is encountered
+fscanf(fp, "%*["^\n]\n", str) matches any character that is not a newline until newline is encountered
 
 fscanf(fp, "%[,],", str) reads any character that is not a comma until a comma is met.
 
