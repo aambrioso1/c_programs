@@ -35,7 +35,7 @@ int main()
 	}
 
 	print_list(first);
-
+	/*
 
 	int n;
 
@@ -45,7 +45,7 @@ int main()
 	// We can occurence of n using count_n.   The function count_n iterates straight through the list.
 	printf("Using count_n:  %d appears %d times\n", n, count_n(first,n));
 	
-
+	
 
 	// We count the occurences o fn using search_list.  Find the first occurrance of n.  Then we call search_list again starting at the next pointer after n was found.   to find n.  The count is incremental every time n is found. 
 	int count = 0;
@@ -67,12 +67,12 @@ int main()
 	first = add_to_list(first, 5);
 	first = add_to_list(first, 7);
 	first = add_to_list(first, 11);
-	
+	*/
+	struct node *largest = find_largest(first);
+	printf("The largest value in first is %d\n", largest->value);
 
-
-
-	printf("After clearing the list and adding 2, 3, 5, 7, and 11 to it we get: ");
-	print_list(first);
+	//printf("After clearing the list and adding 2, 3, 5, 7, and 11 to it we get: ");
+	//print_list(first);
  
 	return 0;
 }
@@ -131,22 +131,21 @@ void clear_list(struct node *list)
      if( p != NULL)
            free(p);
   }
+  printf("list after clearing: ");
+  print_list(list);
 }
 
-/*
-struct node *find_largest(struct node *list)
-{
+
+struct node *find_largest(struct node *list) {
 	struct node *p, *q = NULL;
-	for(p=list; p!= NULL; p==p->next) {
+	for(p=list; p!= NULL; p=p->next) {
 		if(q == NULL || p->value > q->value)
 		q = p;
 	}
+	return q;
 }
 
 
-	return NULL;
-}
-*/
 
 int duplicates(struct node *list){
        //add code here
