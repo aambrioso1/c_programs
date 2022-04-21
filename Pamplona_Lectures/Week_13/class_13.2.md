@@ -10,7 +10,7 @@
 struct node *find_largest(struct node *list); 
 ```
 
-* linked_list.c - an example of a linked list with functions for print, finding the largest value, and checking if a list has duplicates.
+* [linked_list.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/linked_list.c) - an example of a linked list with functions for print, finding the largest value, and checking if a list has duplicates.
 
 ### Start here:  6:00
 
