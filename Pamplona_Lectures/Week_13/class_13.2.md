@@ -68,8 +68,15 @@ Note the functions were are created all return the new first element of the list
 
 In class a student asks an excellent question and Pamplona explains. (36:00) 
 
-Question:  WHat does the delete function need to return the list.
-Pamplona's answer:  When we delete the first element of the list we need to update the pointer to the list.   This pointer is the first element of the list.    We can update it with the call to append as show in the main() program.   
+Question:  Why does the delete function need to return the list.
+Pamplona's answer:  When we delete the first element of the list we need to update the pointer to the list.   
+
+This pointer is the first element of the list.    We update the list with the call to append as show in the main() program:
+
+```
+first = delete_from_list(first, 123);
+```
+
 
 ### Maintaining an Ordered Linked List
 
