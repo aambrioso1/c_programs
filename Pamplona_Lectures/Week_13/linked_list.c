@@ -11,6 +11,12 @@ struct node *find_largest(struct node *list);
 
 int count_n(struct node *list, int n);
 
+struct node *append(struct node *list, int n); 
+
+struct node *delete_from_list(struct node *list, int n);
+
+
+// The numbered items show how to create a basic linked list with nodes added to the top of the list (a stack).
 //1.
 struct node {
 	int value;          /* data stored in the node  */
@@ -34,7 +40,27 @@ int main()
 		first = add_to_list(first, x);
 	}
 
+	printf("The list first is: ");
 	print_list(first);
+
+	struct node *largest = find_largest(first);
+	printf("The largest value in first is %d\n", largest->value);
+	
+	printf("Does first have duplicates? Answer: %d\n", duplicates(first));
+
+	int new1 = 123;
+	int new2 = 321;
+
+	first = append(first, new1);
+	first = append(first, new2);
+	printf("The list first with %d and %d appended to it is: ", new1, new2);
+	print_list(first);
+	first = delete_from_list(first, 123);
+	printf("If we now delete %d from the list we have: ", new1);
+	print_list(first);	
+	return 0;	
+
+
 	/*
 
 	int n;
@@ -68,19 +94,16 @@ int main()
 	first = add_to_list(first, 7);
 	first = add_to_list(first, 11);
 	*/
-	struct node *largest = find_largest(first);
-	printf("The largest value in first is %d\n", largest->value);
 
 	//printf("After clearing the list and adding 2, 3, 5, 7, and 11 to it we get: ");
 	//print_list(first);
- 
-	return 0;
+
 }
 
 
 
 
-/*** Function to add a node to the list ***/
+/*** Function to add a node to the beginning of list ***/
 struct node *add_to_list(struct node *list, int n) 
 {
 	// 3. Create a new node
@@ -102,6 +125,40 @@ struct node *add_to_list(struct node *list, int n)
 	return new_node;
 }
 
+/*** Function to add a node to the end of list ***/
+struct node *append(struct node *list, int n) 
+{
+	// Create a new node
+	struct node *new_node; 
+
+	// Allocate memory for the new node
+	new_node = malloc(sizeof(struct node));
+	if (new_node == NULL) {
+	printf("malloc failed in add_to_list\n");
+	return list;
+	}
+
+	// Store values in the new node.
+	new_node->value = n; //  Equivalent to (*new_node).value = n .  We use indirection to access the value point to by new_node.
+	new_node->next = NULL;
+
+	// If the list is empty just add the new node.
+	if (list == NULL)
+		return new_node; // new_node becomes the first and only member of the list.
+
+	// Find the end of the list.
+	struct node *p; // 
+
+	for (p = list; p->next != NULL; p = p->next); // Go to the end of the list
+
+	// The for loop left p add the end of the list.
+	p->next = new_node; // Point the last element of the list to the new_node.
+	
+	return list; // Return the new list.
+}
+
+
+
 struct node *search_list(struct node *list, int n)
 {
 	  struct node *p;
@@ -115,7 +172,7 @@ struct node *search_list(struct node *list, int n)
 void print_list(struct node *list)
 {
 	struct node *p;
-	for(p= list; p!=NULL; p = p->next)
+	for(p= list; p != NULL; p = p->next)
 		printf("%d ", p->value);
 	printf("\n");
 }
@@ -138,7 +195,8 @@ void clear_list(struct node *list)
 
 struct node *find_largest(struct node *list) {
 	struct node *p, *q = NULL;
-	for(p=list; p!= NULL; p=p->next) {
+	// The for loop code structure here is the most important thing to know.
+	for(p = list; p != NULL; p = p->next) {
 		if(q == NULL || p->value > q->value)
 		q = p;
 	}
@@ -146,11 +204,14 @@ struct node *find_largest(struct node *list) {
 }
 
 
-
 int duplicates(struct node *list){
-       //add code here
-       return 0;
-
+	struct node *p, *q = NULL;
+	// The for loop code structure here is the most important thing to know.
+	for(p = list; p!= NULL; p = p->next) {
+		if(search_list(p->next, p->value) != NULL)
+			return 1;
+	}
+	return 0;
 }
 
 
@@ -167,29 +228,45 @@ int count_n(struct node *list, int n)
 	  return count;
 }
 
+// Delete n from list.
+struct node *delete_from_list(struct node *list, int n)
+{
+	struct node *cur, *prev;
+	
+	// Find the node that needs to be delete (cur) AND the node before it (prev).
+	for (cur = list, prev = NULL; // Initialize cur as list and prev as NULL
+		cur != NULL && cur->value != n; // Keep going if we haven't reached the end of the list or the node with value n
+		prev = cur, cur = cur->next);
+
+	if (cur == NULL)
+		return list;
+	if (prev == NULL) {
+		list = cur->next;
+	}
+	else
+		prev->next = cur->next; // Bypass the node to be deleted by pointing prev directly to the node after cur.
+	free(cur); // Free the memory associated with the deleted node.
+
+	return list;
+}
+
 //struct node *add_sorted_list
 
 
-/************************ Output *****************************
-PS C:\Users\Alex\c_programs\Pamplona_Lectures\Week_13> ./a.exe
-Enter x (>0): 3
-Enter x (>0): 4
-Enter x (>0): 6
-Enter x (>0): 7
+
+/************************ Output ****************************
+
+> ./a.exe
+Enter x (>0): 22
+Enter x (>0): 35
+Enter x (>0): 100
 Enter x (>0): 1
-Enter x (>0): 11
-Enter x (>0): 11
-Enter x (>0): 8
-Enter x (>0): 7
-Enter x (>0): 33
-Enter x (>0): 1
-Enter x (>0): 11
-Enter x (>0): 6
-Enter x (>0): 11
+Enter x (>0): 35
 Enter x (>0): 0
-11 6 11 1 33 7 8 11 11 1 7 6 4 3
-Enter n: 11
-Using count_n:  11 appears 4 times
-Using search_list:  11 appears 4 times
-After clearing the list and adding 2, 3, 5, 7, and 11 to it we get: 11 7 5 3 2
+The list first is: 35 1 100 35 22
+The largest value in first is 100
+Does first have duplicates? Answer: 1
+The list first with 123 and 321 appended to it is: 35 1 100 35 22 123 321
+If we now delete 123 from the list we have: 35 1 100 35 22 321
+
 *****************************************************************************/
