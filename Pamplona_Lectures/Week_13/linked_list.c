@@ -15,6 +15,8 @@ struct node *append(struct node *list, int n);
 
 struct node *delete_from_list(struct node *list, int n);
 
+struct node *add_sorted(struct node *list, int n);
+
 
 // The numbered items show how to create a basic linked list with nodes added to the top of the list (a stack).
 //1.
@@ -58,6 +60,24 @@ int main()
 	first = delete_from_list(first, 123);
 	printf("If we now delete %d from the list we have: ", new1);
 	print_list(first);	
+	
+	// We demonstrated a sorted list.
+	printf("********** Create a Sorted List **********\n");
+	
+	struct node *second = NULL; // Initial the sorted list.
+
+	for (;;) {
+		printf("Enter x (>0): ");
+		scanf("%d", &x);
+		if(x <= 0)
+			break;
+		second = add_sorted(second, x);
+	}
+
+	printf("The sorted list is: ");
+	print_list(second);
+
+
 	return 0;	
 
 
@@ -166,6 +186,8 @@ struct node *search_list(struct node *list, int n)
 	  for (p = list; p != NULL; p = p->next)
 	    if (p->value == n)
 	      return p;
+	  	else if (p->value > n) 
+	  		break;
 	  return NULL;
 }
 
@@ -203,7 +225,7 @@ struct node *find_largest(struct node *list) {
 	return q;
 }
 
-
+// Returns a 1 if the list has duplicates and 0 otherwise.
 int duplicates(struct node *list){
 	struct node *p, *q = NULL;
 	// The for loop code structure here is the most important thing to know.
@@ -250,7 +272,37 @@ struct node *delete_from_list(struct node *list, int n)
 	return list;
 }
 
-//struct node *add_sorted_list
+struct node *add_sorted(struct node *list, int n)
+{
+	struct node *cur, *prev;
+	
+	// Find the node that needs to be delete (cur) AND the node before it (prev).
+	for (cur = list, prev = NULL; // Initialize cur as list and prev as NULL
+		cur != NULL && cur->value < n; // Keep going if we haven't reached the end of the list or the node with value n
+		prev = cur, cur = cur->next);
+
+	// Create a new node
+	struct node *new_node; 
+
+	// Allocate memory for the new node
+	new_node = malloc(sizeof(struct node));
+	if (new_node == NULL) {
+	printf("malloc failed in add_to_list\n");
+	return list;
+	}
+
+	// Store values in the new node.
+	new_node->value = n; //  Equivalent to (*new_node).value = n.
+
+	if (prev == NULL) {
+		list = new_node;
+	}
+	else
+		prev->next = new_node;  // point previous node (prev) to new_node
+	new_node->next = cur;  // point new node to the next node (cur)
+
+	return list;
+}
 
 
 
