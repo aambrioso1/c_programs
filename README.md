@@ -10,7 +10,7 @@ Programs for COP 3514 Lectures are in their own folder.
 * pointer_exercise_5_1_1
 * pointer_exercise_5_1_2
 
-##### Week 6: First Lecture
+##### Week 6: First Lecture 
 * max_pointers_6.1.c
 * find_largest_return_pointer_6_1.c (video: 53:54)
 * find_middle_6_1.c
@@ -34,17 +34,37 @@ Programs for COP 3514 Lectures are in their own folder.
 * p2_20.c - Problem 20 with notes.
 
 ##### Week 11: First Lecture - Working with files
-* canopen.c - checks is a file can be opened
-* fcopy.c -  contcopysent of one file, file1, to another, file2.  Usage: ./a.exe file1 file2
-* my_cat - prints contents of a file to stdout
 Please note that the notes for the first lecture are not complete but the notes for Lecture 2 are.
 The notes for Lecture 2 are more useful for Project 6 so I finished them.
+* canopen.c - checks is a file can be opened (video: 14:00)
+* fcopy.c -  copies the content of one file, file1, to another, file2.  Usage: ./a.exe file1 file2
+* my_cat - prints contents of a file to stdout
+
 
 ##### Week 11: Second Lecture - Working with files (continued)
-* dumbbells.c - uses the file dumbbells.txt to demonstrate opening a file to access and processing information on that file. (18:32)
+* dumbbells.c - uses the file dumbbells.txt to demonstrate opening a file to access and process information on that file. (18:32)
 * read_animals_csv.c - demonstrates reading a file line by line using conversion specifiers to skip commas. (45:45)
 * grades.c - demonstrates writing to a file. (59:30)
 * selection_sort.c - opens a file, numbers.txt, reads the numbers in the file to an array, sorts the array, and writes the sorted numbers to a another file. (1:01:38)
+
+##### Week 12:  First Lecture
+* structures - all of the introductory structure concepts in one program! (9:00 - 38:00)
+* colors.c - an application that uses a structure to store and change color information (38:00 - 49:00)
+
+##### Week 12:  Second Lecture
+* [My Notes](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_12/class_12.2.c)
+
+
+##### Week 13:  First Lecture
+
+* [My Notes](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/class_13.1.md)
+* [link_list.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/linked_list.c) - a complete example based on the lectures.  Includes append, add_sorted, and delete_from_list with examples.
+
+
+##### Week 13:  Second Lecture
+
+* [My Notes](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/class_13.2.md)
+* [stack.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/stack.c) - implements a stack.
 
 ## Problems from Test 2 Practice Test 
 

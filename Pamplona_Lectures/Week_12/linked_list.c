@@ -34,6 +34,7 @@ int main()
 	//add code here
  		
 	clear_list(first); 
+	
 
 	// first = add_to_list(first, 3);
 
