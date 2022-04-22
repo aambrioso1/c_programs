@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Practice Test 3 - Problem 1
+// The answer is in the function definition of count_n() (lines 50-51).
 
 struct node *add_to_list(struct node *list, int n);
 int count_n(struct node *list, int n);
