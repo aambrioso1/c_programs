@@ -10,8 +10,6 @@
 struct node *find_largest(struct node *list); 
 ```
 
-
-
 ### Start here:  6:00
 
 ### Exercise 2:  Complete the function that decides if a linked list has duplicates. (video:  6:00)
@@ -30,7 +28,7 @@ struct node *next;
 };
 ```
 
-Exercise 1 and 2 are solved here:
+Exercises 1 and 2 are solved here:
 * [linked_list.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/linked_list.c) - an example of a linked list with functions for print, finding the largest value, and checking if a list has duplicates.
 
 ### Inserting a Node at the End of a Linked List
@@ -68,10 +66,10 @@ Note the functions that were are created all return the new first element of the
 
 In class a student asks an excellent question and Pamplona explains. (36:00) 
 
-Question:  Why does the delete function need to return the list.
+Student's question:  Why does the delete function need to return the list.
 Pamplona's answer:  When we delete the first element of the list we need to update the pointer to the list.   
 
-This pointer is the first element of the list.    We update the list with the call to append as show in the main() program:
+This pointer is the first element of the list.    We update the list with the call to append() as show in the main() program:
 
 ```
 first = delete_from_list(first, 123);
@@ -79,10 +77,10 @@ first = delete_from_list(first, 123);
 
 
 ### Maintaining an Ordered Linked List
-Link lists are nicer than arrays for adding elements where we want to.    With an array we must shift all the elements of an array over to make room for a new element.    With a linked list we simply point the element before the insertion position to the new element and point the new elemnt to the element after the insertion position.
+Link lists are nicer than arrays for adding elements where we want to.    With an array we must shift all the elements of an array over to make room for a new element.    With a linked list we simply point the element before the insertion position to the new element and point the new element to the element after the insertion position.
 
 ##### Ordered Link list - nodes are kept in order
-* An ordered list require code to find the position where a new element should be inserting.   
+* An ordered list requires code to find the position where a new element should be inserting.   
 * Searching is faster.
 
 We will create a linked list of structs with a single integer value as before:
@@ -112,12 +110,12 @@ This loop accomplishes two things:
 
 
 Advantages (58:46)
-1.  We can stop the a search early since we new the size of the element we are searching for.    We stop when we find a value larger than the one we are looking for. 
-2.  Our search_list algorithm, and any other algorithm involving search, can be improve by stop the search when we reach a number that is larger the n.
+1.  We can stop a search early.  Since we know the size of the element we are searching for, we can stop when we find a value larger than the one we are looking for. 
+2.  Our search_list algorithm, and any other algorithms involving search, can be improved by stopping the search when we reach a number that is larger the n.
 
 ##### Question (1:00:30)
-Does add_sorted work if the number to be inserted is larger than all the numbers on the list?
-Answer:  Yes.  We need to consider where prev and cur will point when the loop will stops at the end of the list. This is the code that updates the list:
+Does our version of add_sorted() work if the number to be inserted is larger than all the numbers on the list?
+Answer:  Yes.  We need to consider where prev and cur will point when the loop stops at the end of the list. This is the code that updates the list:
 
 ```
 	else
@@ -125,10 +123,10 @@ Answer:  Yes.  We need to consider where prev and cur will point when the loop w
 	new_node->next = cur;  // point new node to the next node (cur)
 ```
 
-Since prev will point at the last item on the list, prev->next is update to the new_node as it should be.  At termination of the loop cur will point to null so new_node->next is update to NULL as it should be.  All is well! 
+Since prev will point at the last item on the list, prev->next is updated to the new_node as it should be.  At termination of the loop, cur will point to null so new_node->next is updated to NULL as it should be.  All is well! 
 
 
-Here is the code for sorted_insert.   There are some instructive, but minor, differences between this code and the code in the lecture.   The algorithm here is slightly more efficient and easier to read.   See my comments in the INSERT NEW NODE part of the code at the end.
+Here is the code for sorted_insert.   There are some instructive, but minor, differences between this code and the code in the lecture.   The algorithm here is slightly more efficient and easier to read.   See my comments in the INSERT NEW NODE part of the code below.
 
 ```
 struct node *sorted_insert(struct node *list, int n) {
@@ -164,7 +162,7 @@ struct node *sorted_insert(struct node *list, int n) {
 ##### Programming Design Example:  Stacks (video: 1:02:48)
 
 * A stack, LIFO (last in, first out) is a data structure that can store multiple items of the same type.
-* Stacks are used extensively at every level of a modern computer system (recursion for instance and old HP calculators).
+* Stacks are used extensively at every level of a modern computer system (recursion for and old HP calculators for example).
 *  Used to process arithmetic expressions, for memory management, and for backtracking.
 
 ##### And now for something completely different ... (video: 1:03:37)
