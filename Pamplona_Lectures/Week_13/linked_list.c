@@ -278,7 +278,7 @@ struct node *add_sorted(struct node *list, int n)
 	
 	// Find the node that needs to be delete (cur) AND the node before it (prev).
 	for (cur = list, prev = NULL; // Initialize cur as list and prev as NULL
-		cur != NULL && cur->value < n; // Keep going if we haven't reached the end of the list or the node with value n
+		cur != NULL && cur->value < n; // Keep going if current value is smaller than n
 		prev = cur, cur = cur->next);
 
 	// Create a new node
@@ -306,7 +306,7 @@ struct node *add_sorted(struct node *list, int n)
 
 
 
-/************************ Output ****************************
+/***************************** Output ***********************************
 
 > ./a.exe
 Enter x (>0): 22
@@ -321,4 +321,4 @@ Does first have duplicates? Answer: 1
 The list first with 123 and 321 appended to it is: 35 1 100 35 22 123 321
 If we now delete 123 from the list we have: 35 1 100 35 22 321
 
-*****************************************************************************/
+*************************************************************************/

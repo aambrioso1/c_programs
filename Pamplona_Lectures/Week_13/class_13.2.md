@@ -166,10 +166,17 @@ struct node *sorted_insert(struct node *list, int n) {
 
 * A stack, LIFO (last in, first out) is a data structure that can store multiple items of the same type.
 * Stacks are used extensively at every level of a modern computer system (recursion for instance and old HP calculators).
+*  Used to process arithmetic expressions, for memory management, and for backtracking.
 
 ##### And now for something completely different ... (video: 1:03:37)
 
 Water begins to pour into the classroom near the projector on the left side of the room (from students perspective).  Pamplona suggests we extend the lecture since it's raining outside.  He laughs and "whu-who's" at the thought!!! 
 
 ##### Implementing a Stack (Start at 1:07:32)
+
+A stack has the following operations
+* Push - add an item to the top of the stack
+* Pop - remove an item for the top of the stack
+* Peak - look at top of the stack without stoppoing.
+* Clear the stack.
 
