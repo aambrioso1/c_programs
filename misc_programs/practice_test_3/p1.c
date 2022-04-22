@@ -18,7 +18,7 @@ int main() {
 	// We use this loop to read in values for the list from the keyboard.
 	// Usage:  Type in a number then enter.   Stops when user inputs 0.
 	
-	struct node *my_list = NULL;  // We initalize the list as NULL pointer.  This is the first element of the list.
+	struct node *my_list = NULL;  // We initialize the list as NULL pointer.  This is the first element of the list.
 
 
 	int x;
