@@ -45,12 +45,12 @@ You can find the function here: [linked_list.c](https://github.com/aambrioso1/c_
 
 ### Deleting a Node from a Linked List
 
-* We use the trailing pointer technique by iterating a pointer the keeps track of the previous node (prev) and the current node (cur). 
+* We use the trailing pointer technique by iterating through a the list using two pointers: one that keeps track of the previous node (prev) and one that keeps track of the current node (cur). 
 
-Deleting a node involves three steps;
-1. Locate the node to be delected.
-2. Alter the previous nodes so that it bypasses the deleted node.
-3. Call ```free``` to reclaim the memory space occupied by the deleted node.
+Deleting a node involves three steps:
+1. Locating the node to be deleted.
+2. Altering the previous nodes so that it bypasses the deleted node.
+3. Calling ```free``` to reclaim the memory space occupied by the deleted node.
 
 The following code implements the first step:
 
@@ -61,7 +61,7 @@ for (cur = list, prev = NULL; // Initialize cur as list and prev as NULL
 	;  // When the loop terminates cur points to the node to be deleted and prev points to the previous node.
 ```
 
-You can find the function ```delete_the_list``` here: [linked_list.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/linked_list.c).
+You can find the function ```delete_from_list``` here: [linked_list.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/linked_list.c).
 
 
 Note the functions that were are created all return the new first element of the list.   The allows us to update the first element of the list.
