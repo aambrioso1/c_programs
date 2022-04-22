@@ -64,7 +64,7 @@ for (cur = list, prev = NULL; // Initialize cur as list and prev as NULL
 You can find the function ```delete_the_list``` here: [linked_list.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/linked_list.c).
 
 
-Note the functions were are created all return the new first element of the list.   The allows us to update the first element of the list.
+Note the functions that were are created all return the new first element of the list.   The allows us to update the first element of the list.
 
 In class a student asks an excellent question and Pamplona explains. (36:00) 
 
@@ -79,14 +79,13 @@ first = delete_from_list(first, 123);
 
 
 ### Maintaining an Ordered Linked List
-
 Link lists are nicer than arrays for adding elements where we want to.    With an array we must shift all the elements of an array over to make room for a new element.    With a linked list we simply point the element before the insertion position to the new element and point the new elemnt to the element after the insertion position.
 
 ##### Ordered Link list - nodes are kept in order
 * An ordered list require code to find the position where a new element should be inserting.   
 * Searching is faster.
 
-We will create a linked list of structs with a single integer value as before
+We will create a linked list of structs with a single integer value as before:
 
 ```
 // Note structure
@@ -172,11 +171,13 @@ struct node *sorted_insert(struct node *list, int n) {
 
 Water begins to pour into the classroom near the projector on the left side of the room (from students perspective).  Pamplona suggests we extend the lecture since it's raining outside.  He laughs and "whu-who's" at the thought!!! 
 
-##### Implementing a Stack (Start at 1:07:32)
+##### Implementing a Stack (video: 1:07:32)
 
 A stack has the following operations
 * Push - add an item to the top of the stack
 * Pop - remove an item for the top of the stack
 * Peak - look at top of the stack without stoppoing.
 * Clear the stack.
+
+* [stack.c](https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_13/stack.c - implements a stack)using dynamic memory allocation and a linked list.
 
