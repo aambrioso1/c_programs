@@ -11,8 +11,6 @@ struct node {
 	struct node *next;  /* pointer to the next node */
 };
 
-
-
 int main() {
 	
 	// We use this loop to read in values for the list from the keyboard.
