@@ -35,9 +35,9 @@ The elements of numbers are now: 98 15 65 98 21 0 -12
 
 You may wonder, "How do we fix the code?"  
 
-One way is to declare MAX as and integer set it to the first value of numbers:
+One way is to declare MAX as an integer and set it to the first value of numbers:
 	int MAX = numbers[0];
-Also, change of all the occurences of *pMax to MAX.
+Then change of all the occurences of *pMax to MAX.
 
 Try it!
 
