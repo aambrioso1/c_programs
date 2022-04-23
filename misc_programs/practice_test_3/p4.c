@@ -33,7 +33,7 @@ The elements of numbers are now: 98 15 65 98 21 0 -12
 
 
 
-You may wonder how do we fix the code?  
+You may wonder, "How do we fix the code?"  
 
 One way is to declare MAX as and integer set it to the first value of numbers:
 	int MAX = numbers[0];
