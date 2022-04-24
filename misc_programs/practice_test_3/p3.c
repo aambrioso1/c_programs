@@ -5,29 +5,39 @@ Topic:  Recursion
 Answer:  
 n = 2   n = 1   n = 0   n = -1  n = 0   n = 1
 
+Comment out the code marked added to run the orginal program.
+
 *************************************************************************/
 
 #include <stdio.h>
 
 void countdown(int n) {
-	printf("\nTop of code: ", n);  // Added printf at top of count.
-	printf("n = %d\t", n);
-	n--;
-	printf("\nJust before if: decrement n: n = %d: ", n); // Added printf after n is increment just before the if.
- 	if (n >= 0) {
- 		printf("\nIn if: call countdown(%d): ",n); // Added printf inside of if.
- 		countdown(n);
 
+
+	printf("\n|Top of code   | printf    | ");  // Added printf at top of count.
+	printf("n = %d\t", n);
+
+	n--;
+	printf("\n|Just before if| n--       | n = %d", n); // Added printf after n is increment just before the if.
+ 	
+ 	if (n >= 0) {
+ 		printf("\n|In if         | countdown | n = %d", n); // Added printf inside of if.
+ 		countdown(n);
  	}
- 	printf("\nBottom code:"); // Added printf at the bottom of count.
+
+ 	printf("\n|Bottom code   | printf    | ", n); // Added printf at the bottom of count.
  	printf ("n = %d\t", n);
+
  }
 
 int main ( ) { 
+	printf("|--------------|-----------|----------|\n");  // Added code
+	printf("|   Position   |  Action   |  n value |\n");  // Added code
+	printf("|--------------|-----------|----------|");
 	countdown(2);
+	printf("\n|--------------|-----------|----------|"); // Added code
  	return 0;
 }
-
 
 
 /***************************** Output ***********************************
