@@ -1,3 +1,15 @@
+/************************Practice Test 3 - Problem 1 ********************
+ Topic:  fscan - scanning text from a file
+
+ Need to figure the role of the buffer size.   Perhap the characters the go beyond
+ end of the buffer are not-defined and behave in unpredictable ways?
+
+Answer: The
+
+
+*************************************************************************/
+
+
 #include <stdio.h>
 
 int main() {
@@ -17,7 +29,8 @@ int main() {
 
 
 I ran this on my Windows system and the student cluster.   The behavior seems to be
-to grab all the characters up to the white space.
+to grab all the characters up to the white space regardless of the length for the string between
+the beginning of the text and the first white space.
 
 
 text.txt = "The quick brown fox jumped over the lazy dog's back."

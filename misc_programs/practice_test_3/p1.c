@@ -1,12 +1,22 @@
+/************************Practice Test 3 - Problem 1 ********************
+Topic:  Using a pointer to loop through an array
+
+The answer:
+
+if (p->value == n)
+	count++; 
+
+See comment lines in the code below.
+
+*************************************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
-
-// Practice Test 3 - Problem 1
-// The answer is in the function definition of count_n() (lines 50-51).
 
 struct node *add_to_list(struct node *list, int n);
 int count_n(struct node *list, int n);
 void print_list(struct node *list);
+
 
 struct node {
 	int value;          /* data stored in the node  */
