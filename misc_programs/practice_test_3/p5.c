@@ -1,10 +1,13 @@
-// Practice Test 3 - Problem 5
-// A question about recursion
-
-#include <stdio.h>
-#include <stdlib.h> // declares malloc, calloc, and realloc
-
 /**********************************************************************************************
+Practice Test 3 - Problem 5
+Declare an array using dynamic memory allocation.
+
+Answer:  
+
+int *a;
+a = malloc(n* sizeof(int)); 
+
+
 The #include statement for stdlib.h declares three memory allocation functions:  
 (1) malloc - allocates a block of memory but does not initialize it.
 (2) calloc - allocates a block of memory and clears it.
@@ -15,6 +18,10 @@ Pamplona's notes are in Canvas
 My notes based on his lectures are here:  
 https://github.com/aambrioso1/c_programs/blob/master/Pamplona_Lectures/Week_12/class_12.2.md
 ***********************************************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h> // declares malloc, calloc, and realloc
+
 
 int main() {
 
@@ -41,14 +48,8 @@ int main() {
 }
 
 
-/***************************** Output ***********************************
+/******************** Output *****************************
 
-Answer:  
-
-int *a;
-a = malloc(n* sizeof(int)); 
-
-Code output:
 > ./a.exe
 Enter 5 integers:
 12
@@ -57,5 +58,6 @@ Enter 5 integers:
 43
 43
 a[0] = 12, a[1] = 12, a[2] = 23, a[3] = 43, a[4] = 43
+
 
 *****************************************************/
