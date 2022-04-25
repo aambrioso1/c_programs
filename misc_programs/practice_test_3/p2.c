@@ -1,11 +1,10 @@
 /************************Practice Test 3 - Problem 2 ********************
  Topic:  fscan - scanning text from a file
 
- Need to figure the role of the buffer size.   Perhap the characters the go beyond
- end of the buffer are not-defined and behave in unpredictable ways?
-
 Answer: The
 
+Note it is important to close the file after fscanf.  If not the program apparently uses the system buffer.
+Thank you Jian for this insight!!!
 
 *************************************************************************/
 
@@ -14,7 +13,9 @@ Answer: The
 
 int main() {
 
-	char buffer[6];
+	// char buffer[6];
+	// char buffer[2];
+	char buffer[3];
 
 	FILE *pFile = fopen("test.txt", "r");
 	
@@ -22,29 +23,26 @@ int main() {
 		printf("\nFrom print_to_file:  Error opening file.\n");
 
 	fscanf(pFile, "%s", buffer);
+	fclose(pFile); // This solve the issue I was having.   Thanks Jian for the insight!!!
 	printf("%s", buffer);
 }
 
-/***************************** Output ***********************************
+/**************************** Output ***********************************
 
-
-I ran this on my Windows system and the student cluster.   The behavior seems to be
-to grab all the characters up to the white space regardless of the length for the string between
-the beginning of the text and the first white space.
-
-
+With buffer as: char buff[6]
 text.txt = "The quick brown fox jumped over the lazy dog's back."
 > ./a.exe
 The
 
-text.txt ="Thequick brown fox jumped over the lazy dog's back."
+With buffer as: char buff[3]
 > ./a.exe
-Thequick
+The
 
-text.txt = "Thequickbrownfox
-jumped over the lazy dog's back."
+With buffer as: char buff[2]
 > ./a.exe
-Thequickbrownfox
 
+With buffer as: char buff[20]
+> ./a.exe
+The
 
-*****************************************************/
+************************************************************************/
