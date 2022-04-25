@@ -3,9 +3,9 @@ Topic: Using function pointers
 
 The answer:   6
 
-The function f1 calls a function pointer: int (*f). This allow f1 to call
-the any function that returns an integer  by using the name of the function called as 
-an argument:  f1(f2).   In the case that function is f2.   
+The function f1 calls a function pointer: int (*f). This allows f1 to call
+the any function that returns an integer by using the name of the function called as 
+an argument:  f1(f2).   In this problem, that function is f2.   
 Note how f1 is declared:  int f1(int (*f) (int));
 *************************************************************************/
 #include <stdio.h>

@@ -3,7 +3,7 @@
 
 Answer: The
 
-Note it is important to close the file after fscanf.  If not the program apparently uses the system buffer.
+Note that it is important to close the file after fscanf.  If not the program apparently uses the system buffer.
 Thank you Jian for this insight!!!
 
 *************************************************************************/
@@ -23,25 +23,26 @@ int main() {
 		printf("\nFrom print_to_file:  Error opening file.\n");
 
 	fscanf(pFile, "%s", buffer);
-	fclose(pFile); // This solve the issue I was having.   Thanks Jian for the insight!!!
+	fclose(pFile); // This solves the issue I was having.   Thanks Jian!!!
 	printf("%s", buffer);
 }
 
 /**************************** Output ***********************************
 
-With buffer as: char buff[6]
+With buffer declared as: char buff[6]
 text.txt = "The quick brown fox jumped over the lazy dog's back."
 > ./a.exe
 The
 
-With buffer as: char buff[3]
+With buffer as declared as: char buff[3]
 > ./a.exe
 The
 
-With buffer as: char buff[2]
+With buffer as declared as: char buff[2]
 > ./a.exe
 
-With buffer as: char buff[20]
+
+With buffer as declared as: char buff[20]
 > ./a.exe
 The
 
