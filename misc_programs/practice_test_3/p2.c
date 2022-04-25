@@ -1,4 +1,4 @@
-/************************Practice Test 3 - Problem 1 ********************
+/************************Practice Test 3 - Problem 2 ********************
  Topic:  fscan - scanning text from a file
 
  Need to figure the role of the buffer size.   Perhap the characters the go beyond
