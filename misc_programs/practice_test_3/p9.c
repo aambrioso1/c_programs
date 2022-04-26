@@ -3,8 +3,11 @@
 
 Answer: list == NULL
 
-The code contains enough functions to experiment with a linked list with items pushed onto the list by add_to_list.
+The code contains enough functions to experiment with a linked list.
+Items pushed onto the list by add_to_list.
 The function isnull() checks if list is empty.
+
+The code below checks if my_list is empty as items are added and deleted to it.
 
 *************************************************************************/
 
@@ -18,8 +21,6 @@ void clear_list(struct node *list);
 void is_null(struct node *list);
 
 
-// The numbered items show how to create a basic linked list with nodes added to the top of the list (a stack).
-//1.
 struct node {
 	int value;          /* data stored in the node  */
 	struct node *next;  /* pointer to the next node */
@@ -107,7 +108,7 @@ struct node *delete_from_list(struct node *list, int n)
 	return list;
 }
 
-
+// Checks if list is empty.
 void is_null(struct node *list) {
 	printf("Is my_list equal to NULL?\n");
 	if (list == NULL)
