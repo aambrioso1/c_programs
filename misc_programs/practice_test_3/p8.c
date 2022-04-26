@@ -5,7 +5,7 @@ Answer: 5
 
 fscan returns the number of items scanned.
 
-Try added another int item to test_p8.test
+Try added another int item to text_p8.test
 
 *************************************************************************/
 #include <stdio.h>
