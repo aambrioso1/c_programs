@@ -1,5 +1,5 @@
 /************************ Practice Test 3 - Problem 10 ********************
-Topic: Using function prototypes
+Topic: Function pointers
 
 The answer:  double integrate(double (*f)(double x), double a, double b);
 
@@ -34,7 +34,6 @@ double integrate(double (*f)(double x), double a, double b) {
 	}
 	return sum;
 }
-
 
 
 /******************** OUTPUT *************************
