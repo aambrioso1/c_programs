@@ -1,5 +1,5 @@
-/************************Practice Test 3 - Problem  ********************
-Topic: Using function pointers
+/************************Practice Test 3 - Problem 15 ********************
+Topic: qsort
 
 The answer:
 
@@ -8,24 +8,15 @@ The answer:
 *************************************************************************/
 #include <stdio.h>
 
-int f1(int (*f) (int));
-int f2(int i);
+int arr[5] = {34, 56, 23, 40, 17}
 
 int main(void) {
-	printf("%d\n", f1(f2));
+
+	for(int i; i < 5; i++)
+	printf("a[%d] = %d\n", i, a[i]);
 	return 0;
 }
 
-int f1(int (*f) (int)) {
-	int n, num = 0;
-	for(n = 0; n < 3; n ++)
-	num = f(n);
-	return num;
-}
-
-int f2(int i) {
-	return i * i + i;
-}
 
 
 /******************** OUTPUT *************************

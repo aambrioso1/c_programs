@@ -3,6 +3,30 @@
 
 Answer: A
 
+// 13 A
+struct node *delete(struct node *list, int n) {
+
+	struct node *cur, *prev;
+
+	// This loop iterates through the list stopping when we reach the end of the list or 
+	// a node with value = n.   At the same time we keep track of the node previous to the one we are on.
+	for(cur = list, prev = NULL;
+		cur!= NULL && cur->value!= n;
+		prev = cur, cur = cur->next)
+ 	;  
+ 	
+	if (cur == NULL)  // if the condition is true then the list is empty.
+		return list;  // There is nothing to do just return the original empty list.
+	if (prev == NULL) // Since we know the list is not empty, when this condition is true the first node
+	// of the list has a value of n.
+		list = list->next;  // We skip the first element and form a new list.
+	else 
+		prev->next = cur ->next;  // We connect prev to cur->next to bypass cur.
+	free(cur); // we release the memory occupied by the bypassed node cur.
+	return list;
+}
+
+
 The code show that the delete function define be 13 (A) works.
 *************************************************************************/
 
@@ -65,7 +89,7 @@ struct node *delete(struct node *list, int n) {
 		list = list->next;
 	else
 		prev->next = cur ->next;
-		free(cur);
+	free(cur);
 	return list;
 }
 
@@ -117,7 +141,7 @@ void is_null(struct node *list) {
 
 /***************************** Output ***********************************
 
-> ./a.exe
+>./a.exe
 Is my_list equal to NULL?
 Yes :)
 The current list is:
@@ -137,6 +161,7 @@ The current list is: 7
 Is my_list equal to NULL?
 Yes :)
 The current list is:
+
 
 
 *************************************************************************/
