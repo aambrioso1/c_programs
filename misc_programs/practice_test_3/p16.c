@@ -3,9 +3,9 @@
 
 Answer: 
 
-fscan returns the number of items scanned.
+fscanf(pFile, "%[^,],%d , %d , %d", name, &month, &day, &year);
 
-Try added another int item to text_p8.test
+The format command %[^,] stops at the first comma.
 
 *************************************************************************/
 #include <stdio.h>
@@ -30,7 +30,9 @@ int main() {
 /**************************** Output ***********************************
 
 > ./a.exe
-5
+Anthony was born on 2/15/1997.
+Erika was born on 7/31/1999.
+Joseph was born on 9/28/2001.
 
 
 ************************************************************************/
