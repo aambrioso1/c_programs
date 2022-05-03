@@ -25,7 +25,7 @@ int main()
 {
 
 
- 	struct node *my_stack = NULL;  // 2. We initalize the list as NULL pointer.  This is the first element of the list.
+ 	struct node *my_stack = NULL;  
  	struct node *my_list = NULL;
 	
  	int x;
