@@ -1,0 +1,13 @@
+prog4-test.txt
+
+The were the quirkier looking cases based on other students' posts.
+Here are my tests for prog4-text.  All are working!
+For R1=1, R2=1, and R3=1, the payoff is 1. 
+For R1=2, R2=1, and R3=1, the payoff is 4.
+For R1=2, R2=1, and R3=2, the payoff is 3.
+For R1=2, R2=1, and R3=3, the payoff is 3.
+For R1=3, R2=2, and R3=1, the payoff is 7.
+For R1=3, R2=1, and R3=2, the payoff is 6.
+For R1=3, R2=3, and R3=2, the payoff is 5.
+For R1=3, R2=2, and R3=2, the payoff is 7.
+For R1=3, R2=3, and R3=3, the payoff is 3.
