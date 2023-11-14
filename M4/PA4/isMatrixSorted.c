@@ -42,7 +42,7 @@ int main(){
                                         {10, 12, 13, 15, 14}
                                      };
 
-    // An unsorted matrix with last two items in row 3 out of order
+    // An unsorted matrix with last two items in row 2 out of order
     int matrix6[NB_ROWS][NB_COLS] = {
                                         {1 , 2 , 3 , 4 ,  5} ,
                                         {6 , 7 , 8 , 10 , 9} ,
