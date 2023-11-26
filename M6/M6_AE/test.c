@@ -55,13 +55,19 @@ int main(){
 	printf("Deallocating cleanly NULL: %s", hsl_deallocate_cleanly(&s11)?"success":"issue");
 	printf(" --> %p:\n", s11);
 
-	
+	char* s12 = hsl_clone(s3);
+	printf("Clone of [%s] is [%s]\n", s3, s12);
+	hsl_deallocate_cleanly(&s12);
+	char* s13 = hsl_clone(s0);
+	printf("Clone of [%s] is [%s]\n", s0, s13);
+	hsl_deallocate_cleanly(&s13);
+	char* s14 = hsl_clone(s1);
+	printf("Clone of [%s] is [%s]\n", s1, s14);
+	hsl_deallocate_cleanly(&s14);
 
+	printf("Concatenating [%s] + [%s] yields %s", s2, s3, hsl_gather(s2,s3));
 
-
-
-	
-
+	printf("Extracting 2 to 5 from [%s] is [%s]\n", s2, hsl_extract(s2, 2, 5));
 
 	return EXIT_SUCCESS;
 }
