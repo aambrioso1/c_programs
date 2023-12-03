@@ -38,7 +38,7 @@ typedef struct dictionary Dictionary;
 int main(){
 
 	char* englishWords[] = {"dog", "daughter", "woman", "boy", "word", "dictionary"};
-	char* foreignWords[] = {"perro", "hija", "woman", "muchacho", "palabra", "diccionario"};
+	char* foreignWords[] = {"perro", "hija", "mujer", "muchacho", "palabra", "diccionario"};
 
 	myWord wordPair_array[ARRAY_SIZE];
 
@@ -61,7 +61,7 @@ int main(){
 ~/documents/c_programs/m7/pa $ ./a.out        
 dog in English is perro in Spanish
 daughter in English is hija in Spanish
-woman in English is woman in Spanish
+woman in English is mujer in Spanish
 boy in English is muchacho in Spanish
 word in English is palabra in Spanish
 dictionary in English is diccionario in Spanish
