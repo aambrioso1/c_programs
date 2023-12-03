@@ -5,6 +5,7 @@
 #include <string.h>
 
 // This is sort of a rehash of the third video lecture
+// All that I do here is build an array of word pairs.
 
 /* Data Structures Definitions */
 
@@ -32,7 +33,7 @@ struct dictionary* dictionary_build(int size);
 
 #define ARRAY_SIZE 6
 typedef struct wordPair myWord;
-typedef struct dictionary Dictionary;
+typedef struct dictionary Dictionary; // I did not use this yet.
 
 
 int main(){
@@ -42,12 +43,13 @@ int main(){
 
 	myWord wordPair_array[ARRAY_SIZE];
 
+	// We construct an array of word pairs
 	for (int i = 0; i < ARRAY_SIZE; i++) {
 		wordPair_array[i].englishWord = englishWords[i];
 		wordPair_array[i].foreignWord = foreignWords[i];
 	}
 
-
+	// We print out the array
 	for (int i = 0; i < ARRAY_SIZE; i++) {
 		printf("%s in English is %s in Spanish\n", wordPair_array[i].englishWord, wordPair_array[i].foreignWord);
 	}
