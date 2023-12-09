@@ -12,7 +12,7 @@ int main() {
 	first = add_to_list(first, 64);
 	first = add_to_list(first, 98);
 	first = add_to_list(first, 3);
-        first = add_to_list(first, 64);
+    first = add_to_list(first, 64);
 	first = add_to_list(first, 3);
 	first = add_to_list(first, 136);
 

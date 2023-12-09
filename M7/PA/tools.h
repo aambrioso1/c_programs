@@ -16,6 +16,9 @@ struct dictionary {
        int size;
 };
 
+#define ARRAY_SIZE 50
+typedef struct wordPair myWord;
+typedef struct dictionary Dictionary; 
 
 /* Prototypes of functions */
 
@@ -43,7 +46,7 @@ int dictionary_add(struct dictionary* d,
                     -6  for any other problem you are able to detect - if any
 
        PARAMETERS   d           the dictionary to work with
-                    English     string representing the English part of the new wordPair
+                    english     string representing the English part of the new wordPair
                     foreign     string representing the foreign part of the new wordPair
     */
 

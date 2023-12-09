@@ -23,3 +23,13 @@ void Node_add_front(Node **list, Node *element){
 	}
 
 }
+
+void Node_del_front(Node **list){
+	if (list == NULL) return;
+	if(*list == NULL) return;
+
+	Node * p = (*list)->next;
+	free(*list);
+	*list = p;
+
+}

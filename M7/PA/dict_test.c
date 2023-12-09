@@ -31,31 +31,58 @@ struct dictionary* dictionary_build(int size);
        PARAMETERS   The size of the dictionary to make
      */
 
-#define ARRAY_SIZE 6
+#define ARRAY_SIZE 50
 typedef struct wordPair myWord;
-typedef struct dictionary Dictionary; // I did not use this yet.
+typedef struct dictionary Dictionary; 
 
 
 int main(){
 
-	char* englishWords[] = {"dog", "daughter", "woman", "boy", "word", "dictionary"};
-	char* foreignWords[] = {"perro", "hija", "mujer", "muchacho", "palabra", "diccionario"};
+	char* englishWords[] = 	{
+						"dog", "daughter", "woman", "boy", "word", 
+						"dictionary", "good", "talk", "Spanish", "English"
+						};
+	char* foreignWords[] = 	{
+						"perro", "hija", "mujer", "muchacho", "palabra",
+						"diccionario", "bueno", "hablar", "espanol", "ingles"
+						};
 
-	myWord wordPair_array[ARRAY_SIZE];
+
+	Dictionary *myDictionary = dictionary_build(10);
+
+	printf("%d\n", myDictionary->nbwords);
+	printf("%d\n", myDictionary->size);
+
 
 	// We construct an array of word pairs
-	for (int i = 0; i < ARRAY_SIZE; i++) {
-		wordPair_array[i].englishWord = englishWords[i];
-		wordPair_array[i].foreignWord = foreignWords[i];
-	}
-
-	// We print out the array
-	for (int i = 0; i < ARRAY_SIZE; i++) {
-		printf("%s in English is %s in Spanish\n", wordPair_array[i].englishWord, wordPair_array[i].foreignWord);
+	for (int i = 0; i < 10; i++) {
+		//strcpy((myDictionary->data[i])->englishWord, englishWords[i]);
+		//strcpy((myDictionary->data[i])->foreignWord, foreignWords[i]);
 	}
 
 	return 0;
 }
+
+
+struct dictionary* dictionary_build(int size){
+     /* ROLE        Allocate and initialize a new dictionary structure able to accommodate
+                    a number of pairs of words specified by the size parameter
+       RETURNS      Address of new dictionary, if allocation was successful.
+                    NULL otherwise
+       PARAMETERS   The size of the dictionary to make
+     */
+
+     Dictionary *d = NULL;
+     myWord *data = NULL;
+     d = (Dictionary*)malloc(sizeof(Dictionary));
+	d->data=(myWord**)malloc(sizeof(myWord*)*size);
+	d->size = size;
+	d->nbwords = 0;
+	return d;
+
+}
+
+
 
 /************* OUTPUT ******************
 

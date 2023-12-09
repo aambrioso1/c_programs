@@ -14,3 +14,5 @@ Node * Node_create(int value);
 void Node_display(Node ** list);
 void Node_add_front(Node **list, Node *element);
 void Node_add_tail(Node **list, Node *element);
+void Node_del_tail(Node **list);
+void Node_del_front(Node **list);
